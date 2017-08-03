@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		689712A61F31934900E68190 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689712A51F31934900E68190 /* AppDelegate.swift */; };
-		689712A81F31934900E68190 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689712A71F31934900E68190 /* ViewController.swift */; };
+		689712A81F31934900E68190 /* TipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689712A71F31934900E68190 /* TipViewController.swift */; };
 		689712AB1F31934900E68190 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 689712A91F31934900E68190 /* Main.storyboard */; };
 		689712AD1F31934900E68190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 689712AC1F31934900E68190 /* Assets.xcassets */; };
 		689712B01F31934900E68190 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 689712AE1F31934900E68190 /* LaunchScreen.storyboard */; };
 		689712BB1F31934900E68190 /* TipsterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689712BA1F31934900E68190 /* TipsterTests.swift */; };
 		689712C61F31934900E68190 /* TipsterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689712C51F31934900E68190 /* TipsterUITests.swift */; };
+		689712D61F32F09400E68190 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689712D51F32F09400E68190 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		689712A21F31934900E68190 /* Tipster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tipster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		689712A51F31934900E68190 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		689712A71F31934900E68190 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		689712A71F31934900E68190 /* TipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipViewController.swift; sourceTree = "<group>"; };
 		689712AA1F31934900E68190 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		689712AC1F31934900E68190 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		689712AF1F31934900E68190 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		689712C11F31934900E68190 /* TipsterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipsterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		689712C51F31934900E68190 /* TipsterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsterUITests.swift; sourceTree = "<group>"; };
 		689712C71F31934900E68190 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		689712D51F32F09400E68190 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				689712A51F31934900E68190 /* AppDelegate.swift */,
-				689712A71F31934900E68190 /* ViewController.swift */,
+				689712A71F31934900E68190 /* TipViewController.swift */,
 				689712A91F31934900E68190 /* Main.storyboard */,
 				689712AC1F31934900E68190 /* Assets.xcassets */,
 				689712AE1F31934900E68190 /* LaunchScreen.storyboard */,
 				689712B11F31934900E68190 /* Info.plist */,
+				689712D51F32F09400E68190 /* SettingsViewController.swift */,
 			);
 			path = Tipster;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				TargetAttributes = {
 					689712A11F31934900E68190 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = R72P25AG88;
 						ProvisioningStyle = Automatic;
 					};
 					689712B51F31934900E68190 = {
@@ -259,8 +263,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				689712A81F31934900E68190 /* ViewController.swift in Sources */,
+				689712A81F31934900E68190 /* TipViewController.swift in Sources */,
 				689712A61F31934900E68190 /* AppDelegate.swift in Sources */,
+				689712D61F32F09400E68190 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +417,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R72P25AG88;
 				INFOPLIST_FILE = Tipster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.Tipster;
@@ -424,6 +430,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R72P25AG88;
 				INFOPLIST_FILE = Tipster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.Tipster;
