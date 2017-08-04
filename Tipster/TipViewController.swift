@@ -31,6 +31,10 @@ class TipViewController: UIViewController {
         updateTip()
 
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        billAmountInputTextField.becomeFirstResponder()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -55,8 +59,21 @@ class TipViewController: UIViewController {
         let tipAmount = billAmount*tipPercentage/100
         let billTotal = billAmount + tipAmount
         
-        tipLabel.text = String(format: "$%.2f", tipAmount)
-        billTotalTabel.text = String(format: "$%.2f", billTotal)
+        let locale = Locale.current
+        let currencySymbol = locale.currencySymbol!
+        
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 2
+        
+        let totalTipFormatted = formatter.string(from: NSNumber(value: tipAmount))
+        let totalBillFormatted = formatter.string(from: NSNumber(value: billTotal))
+
+        
+        tipLabel.text = String(format: "\(currencySymbol)%@", totalTipFormatted!)
+        billTotalTabel.text = String(format: "\(currencySymbol)%@", totalBillFormatted!)
         
     }
 
