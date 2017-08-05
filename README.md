@@ -4,7 +4,7 @@ Tipster is a tip calculator application for iOS.
 
 Submitted by: Apurva Mehta
 
-Time spent: 4 hours spent in total
+Time spent: 4.5 hours spent in total
 
 ## User Stories
 
@@ -22,12 +22,16 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 * [X] Made some minor color/font modifications.
+* [X] Added a UI slider to calculate bill split between 1-5 people.
+
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 
-![Video Walkthrough](Tipster.gif)(Tipster2.gif)
+![Video Walkthrough](Tipster.gif)
+![Video Walkthrough](Tipster2.gif)
+![Video Walkthrough](Tipster3.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 

@@ -16,6 +16,10 @@ class TipViewController: UIViewController {
     
     @IBOutlet weak var tipControl: UISegmentedControl!
     
+    @IBOutlet weak var numberOfPeopleSlider: UISlider!
+    @IBOutlet weak var numberOfPeopleLabel: UILabel!
+    @IBOutlet weak var tipPerPersonLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -74,8 +78,36 @@ class TipViewController: UIViewController {
         
         tipLabel.text = String(format: "\(currencySymbol)%@", totalTipFormatted!)
         billTotalTabel.text = String(format: "\(currencySymbol)%@", totalBillFormatted!)
+        updateTipPerPerson()
         
     }
+    
+    @IBAction func calculateTipPerPerson(_ sender: Any) {
+        updateTipPerPerson()
+    }
+    
+    func updateTipPerPerson() {
+        let numberOfPeople = Int(round(numberOfPeopleSlider.value))
+        numberOfPeopleLabel.text = String(numberOfPeople)
+        
+        let totalBillAmount = String(self.billTotalTabel.text!.characters.dropFirst())
+        
+        let billPerPerson = Float(totalBillAmount)! / Float(numberOfPeople)
 
+        
+        let locale = Locale.current
+        let currencySymbol = locale.currencySymbol!
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 2
+        
+        
+        let billPerPersonFormatted = formatter.string(from: NSNumber(value: billPerPerson))
+        tipPerPersonLabel.text = String(format: "\(currencySymbol)%@", billPerPersonFormatted!)
+
+        
+    }
 }
 
